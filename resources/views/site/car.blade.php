@@ -39,7 +39,20 @@
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
           <div class="col-md-9 ftco-animate pb-5">
           	<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Cars <i class="ion-ios-arrow-forward"></i></span></p>
-            <h1 class="mb-3 bread">Choose Your Car</h1>
+			  @auth
+                    @if(auth()->user()->typeUser =='1')
+                        <h1 class="mb-3 bread">Your Cars</h1>
+                        <div>
+                            <a href="{{ route('carSingle') }}" class="btn btn-primary">Add a Car</a>
+                        </div>
+                    @else
+                        <h1 class="mb-3 bread">Choose Your Car</h1>
+                    @endif
+                @else
+                    <h1 class="mb-3 bread">Choose Your Car</h1>
+                @endauth
+                
+           
           </div>
         </div>
       </div>

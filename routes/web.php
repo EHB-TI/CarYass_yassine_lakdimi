@@ -33,7 +33,7 @@ Route::get('/blog', [App\Http\Controllers\NavController::class, 'blog'])->name('
 Route::get('/blog-single', [App\Http\Controllers\NavController::class, 'blogSingle'])->name('blog-single');
 Route::get('/blog', [App\Http\Controllers\NavController::class, 'blog'])->name('blog');
 Route::get('/car', [App\Http\Controllers\NavController::class, 'car'])->name('car');
-Route::get('/car-single', [App\Http\Controllers\NavController::class, 'carSingle'])->name('about');
+Route::get('/car-single', [App\Http\Controllers\NavController::class, 'carSingle'])->name('carSingle');
 Route::get('/contact', [App\Http\Controllers\NavController::class, 'contact'])->name('contact');
 Route::get('/pricing', [App\Http\Controllers\NavController::class, 'pricing'])->name('pricing');
 Route::get('/services', [App\Http\Controllers\NavController::class, 'services'])->name('services');

@@ -1,2 +1,6 @@
-@extends('layouts.app')
-<h1>user</h1>
+
+@extends('layouts.nav')
+
+@include('site.car')
+
+
