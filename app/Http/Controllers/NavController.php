@@ -31,20 +31,12 @@ class NavController extends Controller
         return view('site.car-single');
     }
 
-    public function car()
-    {
-        return view('site.car');
-    }
-
     public function contact()
     {
         return view('site.contact');
     }
 
-    public function pricing()
-    {
-        return view('site.pricing');
-    }
+    
 
     public function services()
     {

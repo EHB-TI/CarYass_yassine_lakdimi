@@ -1,10 +1,9 @@
 @extends('layouts.nav')
 @extends('layouts.app')
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Carbook - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Create a car</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -31,7 +30,6 @@
   </head>
   <body>
     
-	 
     <!-- END nav -->
     
     <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
@@ -39,83 +37,66 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
           <div class="col-md-9 ftco-animate pb-5">
-          	<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Cars <i class="ion-ios-arrow-forward"></i></span></p>
-			  @auth
-                    @if(auth()->user()->typeUser =='1')
-                        <h1 class="mb-3 bread">Your Cars</h1>
-                        <div>
-                        <a href="CreateCars" class="btn btn-primary" title="Add New Car">Add a Car</a>
-                        </div>
-                    @else
-                        <h1 class="mb-3 bread">Choose Your Car</h1>
-                    @endif
-                @else
-                    <h1 class="mb-3 bread">Choose Your Car</h1>
-        @endauth
-                
-           
+          	<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Create Car <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-3 bread">Create Car</h1>
           </div>
         </div>
       </div>
     </section>
 		
 
-		<section class="ftco-section bg-light">
+		<section class="ftco-section ftco-car-details">
+      
+    </section>
+
+    <section class="ftco-section ftco-no-pt">
     	<div class="container">
-
-      <div class="container">
-    <div class="row">
-        @foreach($cars as $item)
-            <div class="col-md-4">
-                <div class="car-wrap rounded ftco-animate">
-                <img class="img rounded d-flex align-items-end" src="{{ asset('images/posts/' . $item->image) }}">
-                    <div class="text">
-                        <h2 class="mb-0"><a href="car-single.html">{{ $item->brand}}</a></h2>
-                        <div class="d-flex mb-3">
-                            <span class="cat">{{ $item->brand }}</span>
-                            <p class="price ml-auto">{{ $item->price }} <span>/day</span></p>
-                        </div>
-                        @auth
-                            @if(auth()->user()->typeUser == '1')
-                            
-                            <a href="" class="btn btn-primary py-2 mr-1">Edit</a>
-                            <form action="{{ route('delete-cars', $item->id)}}" method="post">
-                              @csrf
-                              @method('GET')
-                              <button type="submit" class="btn btn-secondary py-2 ml-1"> Delete </button>
-                              <input type="hidden" name="carid" value=""/>
-                              
-                            </form>
-
-                            @else
-                            <p class="d-flex mb-0 d-block">
-                               <a href="#" class="btn btn-primary py-2 mr-1">Book now</a>
-                               <a href="{{ route('carSingle', ['id' => $item->id]) }}" class="btn btn-secondary py-2 ml-1">Details</a>
-                            </p>
-                            @endif
-                        @endauth
-                    </div>
+    		<div class="row justify-content-center">
+            
+<html>
+<head>
+   
+   
+</head>
+<body>
+    <div class="center">
+        <div class="form-container">
+        <form action="{{ route('cars.store') }}" method="post" enctype="multipart/form-data">
+                @csrf
+                <div class="form-group">
+                    <label for="brand">Brand:</label>
+                    <input type="text" id="brand" name="brand" required>
                 </div>
-            </div>
-        @endforeach
-    </div>
-</div>
-
-    		<div class="row mt-5">
-          <div class="col text-center">
-            <div class="block-27">
-              <ul>
-                <li><a href="#">&lt;</a></li>
-                <li class="active"><span>1</span></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&gt;</a></li>
-              </ul>
-            </div>
-          </div>
+                <div class="form-group">
+                    <label for="price">Price:</label>
+                    <input type="number" id="price" name="price" required>
+                </div>
+                <div class="form-group">
+                    <label for="mileage">Mileage:</label>
+                    <input type="number" id="mileage" name="mileage" required>
+                </div>
+                <div class="form-group">
+                    <label for="transmission">Transmission:</label>
+                    <input type="text" id="transmission" name="transmission" required>
+                </div>
+                <div class="form-group">
+                    <label for="seats">Seats:</label>
+                    <input type="number" id="seats" name="seats" required>
+                </div>
+                <div class="form-group">
+                    <label for="image">Image:</label>
+                    <input type="file" id="image" name="image" required autocomplete="image">
+                </div>
+                <button type="submit">Submit</button>
+            </form>
         </div>
+    </div>
+</body>
+</html>
+
+          
+        </div>
+    
     	</div>
     </section>
     

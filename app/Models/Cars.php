@@ -12,4 +12,5 @@ class Cars extends Model
     protected $primaryKey = 'id';
     protected $fillable = ['brand', "price", "mileage", "transmission", "seats", "image"];
 
+
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Cars;
 
 class CarsController extends Controller
 {
@@ -11,7 +12,8 @@ class CarsController extends Controller
      */
     public function index()
     {
-        //
+        $cars = Cars::all();
+        return view('site.car') -> with('cars', $cars);
     }
 
     /**
@@ -19,7 +21,8 @@ class CarsController extends Controller
      */
     public function create()
     {
-        //
+    
+        return view('admin.CreateCar');
     }
 
     /**
@@ -27,7 +30,14 @@ class CarsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $imageName=time().'.'.$request->image->getClientOriginalExtension();
+        $request->image->move(public_path('images/posts'),$imageName);
+        $input = $request->all();
+        $car =Cars::create($input);
+        $car->update(['image' => $imageName]);
+
+        return redirect('car')-> with('flash_message', 'Car Added !');
     }
 
     /**
@@ -35,7 +45,7 @@ class CarsController extends Controller
      */
     public function show(string $id)
     {
-        //
+      
     }
 
     /**
@@ -43,7 +53,8 @@ class CarsController extends Controller
      */
     public function edit(string $id)
     {
-        //
+
+   
     }
 
     /**
@@ -51,7 +62,9 @@ class CarsController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        
+      
+
     }
 
     /**
@@ -59,6 +72,9 @@ class CarsController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $cars=Cars::find($id);
+        $cars->delete();
+        return redirect('/car');
+    
     }
 }
