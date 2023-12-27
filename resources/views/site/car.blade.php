@@ -78,7 +78,14 @@
                         @auth
                             @if(auth()->user()->typeUser == '1')
                             
-                            <a href="" class="btn btn-primary py-2 mr-1">Edit</a>
+                           
+                             <form action="{{ route('edit-car', $item->id)}}" method="post">
+                              @csrf
+                              @method('GET')
+                              <button type="submit" class="btn btn-primary py-2 mr-1"> Edit</button>
+                              <input type="hidden" name="carid" value=""/>
+                              
+                            </form>
                             <form action="{{ route('delete-cars', $item->id)}}" method="post">
                               @csrf
                               @method('GET')
