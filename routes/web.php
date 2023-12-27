@@ -43,11 +43,14 @@ Route::resource('/cars', CarsController::class);
 Route::get('/car', [App\Http\Controllers\CarsController::class, 'index'])->name('car');
 Route::get('/CreateCars', [App\Http\Controllers\CarsController::class, 'create'])->name('CreateCars');
 
-Route::get('/cars/{id}', 'CarsController@update')->name('cars.update');
+
 Route::get('/car/{id}', 'CarsController@show')->name('car');
 Route::get('/delete-cars/{id}', [App\Http\Controllers\CarsController::class, 'destroy'])->name('delete-cars');
 
+Route::get('/edit-car/{id}', [CarsController::class, 'edit'])->name('edit-car');
 
+// Update car route
+Route::put('/update-car/{id}', [CarsController::class, 'update'])->name('update-car');
 
 
 
