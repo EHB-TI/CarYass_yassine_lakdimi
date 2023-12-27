@@ -53,6 +53,8 @@ class CarsController extends Controller
      */
     public function edit(string $id)
     {
+        $car = Cars::findOrFail($id); 
+        return view('admin.edit')->with('car', $car);
 
    
     }
@@ -62,6 +64,13 @@ class CarsController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        $car = Cars::findOrFail($id); // Find the car by ID or throw a 404 exception if not found
+
+        // Validate the request data as needed
+
+        $car->update($request->all());
+
+        return redirect('car')->with('flash_message', 'Car Updated!');
         
       
 
