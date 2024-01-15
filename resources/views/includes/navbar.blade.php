@@ -18,7 +18,7 @@
                             <li class="nav-item"><a href="{{ route('admin-panel') }}" class="nav-link">Panel</a></li>
                             <li class="nav-item"><a href="{{ route('index') }}" class="nav-link">Messages</a></li>
                             <li class="nav-item"><a href="{{ route('faq.create') }}" class="nav-link"> Add FAQ</a></li>
-                            <a class="nav-link" href="{{ route('faq-categories.create') }}">Create FAQ Category</a>
+                            <li class="nav-item" ><a href="{{ route('faq-categories.create') }}" class="nav-link">Create FAQ Category</a></li>
 
                         @else
                             <!-- User Navigation -->

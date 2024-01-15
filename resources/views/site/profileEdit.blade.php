@@ -1,5 +1,6 @@
 
 @extends('layouts.app')
+<title>profile edit</title>
 
 <link href="{{ asset('css/profileEdit.css') }}" rel="stylesheet">
 

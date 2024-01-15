@@ -1,4 +1,5 @@
 @extends('layouts.app')
+<title>Cars </title>
 
     <section class="hero-wrap hero-wrap-2 js-fullheight"
     @if(auth()->check() && auth()->user()->typeUser == '1')

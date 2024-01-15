@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+<title>welcome</title>
 
 
 

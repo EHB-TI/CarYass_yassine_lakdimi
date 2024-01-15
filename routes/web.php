@@ -11,7 +11,6 @@ use App\Http\Controllers\ProfileController;
 use App\Models\Contact;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\QuestionCategoryController;
-
 use App\Http\Controllers\FAQCategoryController;
 use App\Http\Controllers\FAQController;
 

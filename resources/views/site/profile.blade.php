@@ -9,6 +9,7 @@
 @section('content')
 
 <section class="vh-100 gradient-custom ">
+<title>profile</title>
 
 <div class="container">
     <div class="card ">
