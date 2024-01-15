@@ -10,7 +10,7 @@ class Cars extends Model
     use HasFactory;
     protected $table = 'cars';
     protected $primaryKey = 'id';
-    protected $fillable = ['brand', "price", "mileage", "transmission", "seats", "image"];
+    protected $fillable = ['brand', "price", "mileage", "transmission", "seats", "image", 'rented'];
 
 
 }

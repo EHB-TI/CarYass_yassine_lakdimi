@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string("transmission");
             $table->integer("seats");
             $table->string("image")->nullable();
+            $table->boolean('rented')->default(false);
             $table->timestamps();
         });
     }

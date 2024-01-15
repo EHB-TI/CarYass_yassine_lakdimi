@@ -1,31 +1,9 @@
+@extends('layouts.app')
+<link href="{{ asset('css/messages.css') }}" rel="stylesheet">
 
-
-<style>
-table {
-  margin: 0 auto;
-  position: relative;
-  top: 200px;
-}
-
-/* Définir la couleur de fond de la page */
-body {
-  background-color: navy;
-}
-
-/* Définir la couleur de fond et la bordure du tableau */
-table {
-  background-color: white;
-  border: 3px solid purple;
-}
-
-/* Définir l'espacement et l'alignement des cellules */
-th, td {
-  padding: 20px;
-  text-align: left;
-}
-</style>
-
-<table>
+@section('content')
+<section>
+ <table>
         <tr>
             <th>Name</th>
             <th>Email</th>
@@ -42,3 +20,6 @@ th, td {
             </tr>
         @endforeach
     </table>
+</section>
+
+@endsection

@@ -1,0 +1,49 @@
+/* public/css/profile.css */
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 500px;
+  
+        background: linear-gradient(45deg, rgb(110, 168, 202),rgb(105, 159, 190), #0062b2); /* Gradient background color */
+   
+}
+.card {
+    width: 300px;
+    background-color: #fff; /* White background color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    top: 250px;
+  
+}
+
+.image img {
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    width: 200px; /* Adjust the image width as needed */
+    height: 200px; /* Adjust the image height as needed */
+    margin-bottom: 20px;
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+button {
+    background-color: #343a40; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1d2124; /* Darker background color on hover */
+}

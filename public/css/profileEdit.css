@@ -1,0 +1,47 @@
+/* public/css/profileEdit.css */
+
+
+
+.gradient-custom {
+    background: linear-gradient(45deg, rgb(110, 168, 202),rgb(105, 159, 190), #0062b2); /* Gradient background color */
+}
+
+.formBody {
+    background-color: #ffffff; /* White background for the form */
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift */
+}
+
+.card-body {
+    padding: 2rem; /* Add padding to the card body */
+}
+
+h2 {
+    color: #2196F3; /* Blue color for the heading */
+}
+
+.text-white-50 {
+    color: #868e96; /* Light gray color for the description text */
+}
+
+.form-input {
+    padding: 0.75rem; /* Padding for the input fields */
+    border: 1px solid #ced4da; /* Border color */
+    border-radius: 0.25rem;
+}
+
+button {
+    background-color: #2196F3; /* Blue background color */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition on hover */
+    position: relative;
+    top:20px
+}
+
+button:hover {
+    background-color: #1565C0; /* Darker blue background color on hover */
+}

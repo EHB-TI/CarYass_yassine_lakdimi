@@ -1,5 +1,6 @@
 
-@extends('layouts.nav')
+
+@extends('layouts.app')
 
 @include('site.car')
 

@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
+
+
+<link href="{{ asset('css/panel.css') }}" rel="stylesheet">
+
+
 @section('content')
+<section>
 <div class="container">
     <table class="table">
         <thead>
@@ -34,4 +40,5 @@
         </tbody>
     </table>
 </div>
+</section>
 @endsection

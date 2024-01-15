@@ -64,9 +64,9 @@ class CarsController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $car = Cars::findOrFail($id); // Find the car by ID or throw a 404 exception if not found
+        $car = Cars::findOrFail($id);
 
-        // Validate the request data as needed
+      
 
         $car->update($request->all());
 
@@ -86,4 +86,32 @@ class CarsController extends Controller
         return redirect('/car');
     
     }
+
+    public function rentCar($id) {
+        $car = Cars::findOrFail($id);
+        $car->update(['rented' => true]);
+    
+        return redirect()->back()->with('success', 'Car rented successfully');
+    }
+
+    public function returnCar($id) {
+        $car = Cars::findOrFail($id);
+        $car->update(['rented' => false]);
+    
+        return redirect()->back()->with('success', 'Car returned successfully');
+    }
+
+    public function carDetails($id) {
+        $car = Cars::findOrFail($id);
+        return view('site.car-details')->with('car', $car);
+    }
+
+    public function welcome()
+    {
+        $cars = Cars::all(); 
+    
+        return view('welcome', compact('cars'));
+    }
+    
+    
 }

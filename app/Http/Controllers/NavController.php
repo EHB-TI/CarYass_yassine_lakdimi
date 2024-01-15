@@ -16,30 +16,19 @@ class NavController extends Controller
         return view('site.about');
     }
 
-    public function blogSingle()
-    {
-        return view('site.blog-single');
-    }
-
-    public function blog()
-    {
-        return view('site.blog');
-    }
-
-    public function carSingle()
-    {
-        return view('site.car-single');
-    }
-
+    
     public function contact()
     {
         return view('site.contact');
     }
 
+
+    public function car()
+    {
+        return view('site.car');
+    }
+
     
 
-    public function services()
-    {
-        return view('site.services');
-    }
+   
 }

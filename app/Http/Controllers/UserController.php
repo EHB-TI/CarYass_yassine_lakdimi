@@ -16,7 +16,7 @@ class UserController extends Controller
     public function destroy($id)
     {
         User::destroy($id);
-        return redirect()->route('admin.panel');
+        return redirect()->route('admin-panel');
     }
 
     public function promote($id)
@@ -24,6 +24,6 @@ class UserController extends Controller
         $user = User::find($id);
         $user->typeUser = 1; // Mettre l'utilisateur en tant qu'admin
         $user->save();
-        return redirect()->route('admin.panel');
+        return redirect()->route('admin-panel');
     }
 }

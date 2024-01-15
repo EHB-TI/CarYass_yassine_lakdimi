@@ -23,7 +23,7 @@ class ProfileController extends Controller
     public function update(Request $request)
     {
         $newAvatar=$request->name.'.'.$request->image->extension();
-        $request->image->move(public_path('images'),$newAvatar);
+        $request->image->move(public_path('images/avatar'),$newAvatar);
 
         $user = auth()->user();
        $id=$user->id;

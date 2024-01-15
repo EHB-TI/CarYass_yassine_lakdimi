@@ -1,0 +1,20 @@
+section{
+  background: linear-gradient(45deg, rgb(110, 168, 202),rgb(105, 159, 190), #0062b2); /* Gradient background color */
+
+}
+table {
+    margin: 0 auto;
+    position: relative;
+    top: 200px;
+  }
+  
+  table {
+    background-color: white;
+    border: 3px solid purple;
+    margin-bottom: 1000px;
+  }
+  
+  th, td {
+    padding: 20px;
+    text-align: left;
+  }
